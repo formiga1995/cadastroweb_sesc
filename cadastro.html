@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <title>SESC - Cadastro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script src="jquery.mask.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        jQuery(function($) {
+              $('#cpf').mask('999.999.999-99',{placeholder:"CPF",reverse: true});
+              $('#data').mask('00/00/0000',{placeholder:"Nascimento"});
+              $('#dadm').mask('00/00/0000',{placeholder:"Data de Admissão"});
+              $('#cep').mask('00.000-000',{placeholder:"CEP"});
+              $('#tel').mask('(00)00000-0000',{placeholder:"Telefone"});
+           });
+        </script>
+        <style type="text/css"> 
+            body{
+                overflow-x: hidden;
+                background-color: #faf8fc;
+                font-family: "Montserrat", Times, serif;
+                -webkit-tap-highlight-color:transparent;
+            }
+            .barra{
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 48px;
+                background-color: #113399;
+                box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
+                z-index: 1;
+            }
+            .container{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                
+                margin: auto;
+                margin-top: 100px;
+                width: 800px;
+                /*height: 600px;*/
+                padding: 20px;
+                border-radius: 2px;
+                border-left: 20px solid #113399;
+                background-color: #fffdff;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-flow: row wrap;
+                justify-content: space-around;
+                box-shadow: 1px 2px 5px 0px #666;
+            }
+            #cadastro{
+                /*display: block;*/
+                /*border: 1px solid #000000;*/
+                text-align: center;
+                outline: none;
+                color: #666;
+                font-size: 18px;
+                letter-spacing: 1px;
+                /*box-shadow: 1px 2px 5px 0px #666;*/
+                -webkit-backface-visibility: hidden;
+            }
+            .linha{
+                margin: auto;
+                margin-top: 40px;
+                margin-left: 0px;
+                width: 840px;
+                height: 10px;
+                /*background-color: #eee;*/
+                background-color: #fffdff;
+                text-align: center;
+                /*box-shadow: 0px 14px 8px -8px #aaa;*/
+                box-shadow: 
+                    -0px 0 #fffdff,         /*Left masking shadow*/
+                    0px 0 #fffdff,          /*Right masking shadow*/
+                    0 5px 8px -0px rgba(0, 0, 0, 0.4); /*The real (slim) shadow*/
+            }
+            .entre{
+                font-family: "Montserrat", Times, serif;
+                margin-top: 40px;
+                width: 320px;
+                height: 24px;
+                padding: 2px;
+                border: 0px;
+                outline: none;
+                background: none;
+                border-bottom: 2px solid #666;
+                color: #000;
+                font-size: 18px;
+                letter-spacing: 1px;
+                opacity: 0.6;
+                transition: .2s;
+            }
+            .entre:hover, .entre:focus{
+                opacity: 1;
+                border-bottom: 2px solid #666;
+            }
+            .entre:required:not(:placeholder-shown):invalid{
+                border-bottom: 2px solid #cc2200;
+            }
+            .entre:focus{
+                border-bottom: 2px solid #0044cc;
+            }
+            #email{
+                width: 320px;
+            }
+            #senha{
+                width: 320px;
+            }
+            #cpf{
+                width: 160px;
+            }
+            #nome{
+                width: 480px;
+            }
+            #data{
+                width: 160px;
+            }
+            #sexo{
+                width: 160px;
+                padding: 4px;
+                height: 32px;
+                line-height: 4px;
+            }
+            #civ{
+                width: 315px;
+                padding: 4px;
+                height: 32px;
+                line-height: 4px;
+            }
+            #uf{
+                width: 80px;
+                padding: 4px;
+                height: 32px;
+                line-height: 4px;
+            }
+            #cep{
+                width: 120px;
+            }
+            #end{
+                width: 430px;
+            }
+            #cid{
+                width: 320px;
+            }
+            #bai{
+                width: 320px;
+            }
+            #comp{
+                width: 400px;
+            }
+            #nume{
+                width: 80px;
+            }
+            #hab{
+                width: 160px;
+                padding: 4px;
+                height: 32px;
+                line-height: 4px;
+            }
+            #pai{
+                width: 320px;
+            }
+            #mae{
+                width: 320px;
+            }
+            #rg{
+                width: 120px;
+            }
+            #org{
+                width: 180px;
+            }
+            #nat{
+                width: 160px;
+            }
+            #nac{
+                width: 160px;
+            }
+            #cart{
+                width: 240px;
+            }
+            #prof{
+                width: 400px;
+            }
+            #dadm{
+                width: 200px;
+            }
+            #cnpj{
+                width: 440px;
+            }
+            #rend{
+                width: 320px;
+            }
+            #grau{
+                width: 320px;
+                padding: 4px;
+                height: 32px;
+                line-height: 4px;
+            }
+            #tel{
+                width: 210px;
+            }
+            .botao{
+                margin-top: 20px;
+                width: 320px;
+                height: 44px;
+                padding: 4px;
+                border: 0px;
+                border-radius: 3px;
+                outline:0;
+                
+                /*font-family: "Arial", Times, serif;*/
+                background-color: #113399;
+                color: #ffffff;
+                font-size: 18px;
+                letter-spacing: 1px;
+                transition: .3s;
+                /*box-shadow: inset 0 0 0 5em rgba(255,255,255,0.2);*/
+                transition: box-shadow 0.8s;
+                list-style-type:none;
+                display:inline-block;
+                line-height:2em;
+                color:#fff;
+                position:relative;
+                overflow:hidden;
+                transition: 0.2s;
+            }
+            button {
+                position: relative;
+                overflow: hidden;
+                padding: 16px 32px;
+            }
+            button:after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 420px;
+                height: 420px;
+                margin-left: -210px;
+                margin-top: -210px;
+                /*background: #3f51b5;*/
+                background: #fff;
+                border-radius: 100%;
+                opacity: .2;
+
+                transform: scale(0);
+            }
+
+            @keyframes ripple {
+                0% {
+                    transform: scale(0);
+                }
+                20% {
+                    transform: scale(1);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(1);
+                }
+            }
+
+            button:not(:active):after {
+                animation: ripple 2.5s ease-out;
+            }
+
+            /* fixes initial animation run, without user input, on page load.
+            */
+            button:after {
+                visibility: hidden;
+            }
+
+            button:focus:after {
+                visibility: visible;
+            }
+            .botao:hover, .botao:focus{
+                background-color: #114baa;
+                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+                /*border-radius: 50%;*/
+            }
+            .rodape{
+                overflow-x: hidden;
+                position: relative;
+                border-top: 1px solid #ddd;
+                margin-top: 80px;
+                bottom: 0;
+                left: -7px;
+                width: 100%;
+                height: 48px;
+                padding: 10px;
+                padding-left: 20px;
+                background-color: #fcfcfc;
+                opacity: 0.8;
+            }
+            .rodape img {
+                float: left;
+                margin: auto;
+                height: 100%;
+            }
+            #footinfo{
+                float: left;
+                margin-left: 20px;
+                padding: 20px;
+                border-left: 2px solid #305AA8;
+                color: #666;
+            }
+            ::-webkit-input-placeholder, select.first-child { /* WebKit, Blink, Edge */
+                color: #aaa;
+            }
+            .entre::-webkit-input-placeholder{ /* WebKit, Blink, Edge */
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='barra' style=" height:48px;">
+        </div>
+        <div class="container">
+        <form class='cadastro' id='cadastro' >
+            <div align='center' style="font-size:32px;color: #113399;font-weight: 900;">
+                Cadastro Comerciário SESC
+            </div>
+            <div class="linha" align='center'  style=" margin-top: 10px;"></div>
+            <br>
+            <div align='center' style="font-size: 20px;">Por favor, informe seus dados</div>
+            <br><br>
+            <input class='entre' type="email" id='email' placeholder='E-mail'>
+            <input class='entre' type="password" id='senha' placeholder='Senha'><br>
+            <input class='entre' id='cpf' placeholder='CPF' required
+                   pattern="\d{3}.\d{3}.\d{3}-\d{2}">
+            <input class='entre' id='nome' placeholder='Nome'>
+            <br>
+            <input class='entre' id='data' placeholder='Nascimento' required
+                   pattern="\d{2}/\d{2}/\d{4}">
+            <select class='entre' id='sexo'>
+                <option value="" disabled selected hidden>Sexo...</option>
+                <option>Masculino</option>
+                <option>Feminino</option>
+            </select>
+            <select class='entre' id='civ' >
+                <option value="" disabled selected hidden>Estado Civil...</option>
+                <option>Solteiro</option>
+                <option>Casado</option>
+                <option>Separado</option>
+                <option>Divorciado</option>
+                <option>Viúvo</option>
+            </select>
+            <input class='entre' id='tel' placeholder='Celular'>
+            <input class='entre' id='tel' placeholder='Telefone Fixo'>
+            <input class='entre' id='tel' placeholder='Telefone Comercial'>
+            <div class="linha" align='center'></div>
+            <br>
+            <select class='entre' id='uf'>
+                <option value="" disabled selected hidden>UF...</option>
+                <option>AC</option>
+                <option>AL</option>
+                <option>AP</option>
+                <option>AM</option>
+                <option>BA</option>
+                <option>CE</option>
+                <option>DF</option>
+                <option>ES</option>
+                <option>GO</option>
+                <option>MA</option>
+                <option>MT</option>
+                <option>MS</option>
+                <option>MG</option>
+                <option>PA</option>
+                <option>PB</option>
+                <option>PR</option>
+                <option>PE</option>
+                <option>PI</option>
+                <option>RJ</option>
+                <option>RN</option>
+                <option>RS</option>
+                <option>RO</option>
+                <option>RR</option>
+                <option>SC</option>
+                <option>SP</option>
+                <option>SE</option>
+                <option>TO</option>
+            </select>
+            <input class='entre' id='cep' placeholder='CEP' required
+                   pattern="\d{2}.\d{3}-\d{3}">
+            <input class='entre' id='end' placeholder='Endereço'>
+            <br>
+            <input class='entre' id='cid' placeholder='Cidade'>
+            <input class='entre' id='bai' placeholder='Bairro'>
+            <br>
+            <input class='entre' id='comp' placeholder='Complemento'>
+            <input class='entre' id='nume' placeholder='Número'>
+            <select class='entre' id='hab' >
+                <option value="" disabled selected hidden>Habitação...</option>
+                <option>Própria</option>
+                <option>Alugada</option>
+                <option>Pensão</option>
+                <option>Gratuita</option>
+            </select>
+            <div class="linha" align='center'></div>
+            <br>
+            
+            <div align='left' style="margin-left: 50px;margin-top: 20px;">Outros</div>
+            <input class='entre' id='pai' placeholder='Nome do Pai'>
+            <input class='entre' id='mae' placeholder='Nome da Mãe'><br>
+            <input class='entre' id='rg' placeholder='RG'>
+            <input class='entre' id='org' placeholder='Órgão Emissor'>
+            <input class='entre' id='nat' placeholder='Naturalidade'>
+            <input class='entre' id='nac' placeholder='Nacionalidade'><br>
+            <input class='entre' id='cart' placeholder='N° Carteira Profissional'>
+            <input class='entre' id='prof' placeholder='Profissão'><br>
+            <input class='entre' id='dadm' placeholder='Data de admissão'
+                   pattern="\d{2}/\d{2}/\d{4}">
+            <input class='entre' id='cnpj' placeholder='CNPJ da Empresa'><br>
+            <input class='entre' id='rend' placeholder='Renda Mensal'>
+            <select class='entre' id='grau'>
+                <option value="" disabled selected hidden>Grau de Instrução...</option>
+                <option>Analfabeto</option>
+                <option>Alfabetizado</option>
+                <option>1° Grau Incompleto</option>
+                <option>1° Grau Completo</option>
+                <option>2° Grau Incompleto</option>
+                <option>2° Grau Completo</option>
+                <option>Superior Incompleto</option>
+                <option>Superior Completo</option>
+            </select>
+            <div class="linha" align='center'></div>
+            <br><br>
+            <button class='botao'>Cadastrar-se</button>
+        </form>
+        </div>
+        <div class='rodape'>
+            <img src="sesc.png" alt="SESC" align="middle">
+            <div id="footinfo">
+                Sesc Cadastro 2017
+            </div>
+        </div>
+    </body>
+</html>
