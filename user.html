@@ -7,8 +7,8 @@ and open the template in the editor.
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css\index.css"/>
-        <title>SESC - Recuperar Senha</title>
+        <link rel="stylesheet" type="text/css" href="css\user.css"/>
+        <title>SESC - Acesso</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -22,22 +22,18 @@ and open the template in the editor.
 
     </head>
     <body>
-        <div class='barra'></div>
-        <div class='login' id='login' >
-        <form>
-            <br>
-            <div align='center'>Recuperar Senha</div>
-            <img src ="imgs\sesclogo.png" height="65" width="110">
-            <br><br>
-            <input class='entre' id='cpf' maxlength='14' required
-                   pattern="\d{3}.\d{3}.\d{3}-\d{2}" title="CPF: (###.###.###-##)" placeholder="CPF">
-            <br>
-            <input class='entre' id="nome" placeholder="Nome completo" required="">
-            <input class='entre' id="nome" placeholder="E-mail" required="">
-            <button class='botao'>Enviar E-mail de Recuperacao </button>
-        </form>
-            <button class='botao' id='cadastro' formaction="index.html" onclick="window.location.href='\index.html'">Login</button>
-                   </div>
+    <div class="tabelinha">
+    <div class="menu">
+        <div>Produtos</div>
+        <div class="linha" align='center'></div>
+        <table class="tabela">
+            <tr>
+                <th><input class="entab" placeholder="ID"></input></th>
+                <th><input class="entab" placeholder="Produto"></input></th>
+                <th><input class="entab" placeholder="Preço"></input></th> 
+                <th><input class="entab" placeholder="Quantidade"></input></th>
+                <th><input class="entab" placeholder="Editar"></input></th>
+            </tr>
         
         <script type="text/javascript">
         jQuery(function($) {
