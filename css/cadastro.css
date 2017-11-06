@@ -3,6 +3,8 @@ body{
                 background-color: #faf8fc;
                 font-family: "Montserrat", Times, serif;
                 -webkit-tap-highlight-color:transparent;
+                background-image: url("imgs/white-85.jpg");
+                background-repeat: no-repeat;
             }
             .barra{
                 position: fixed;

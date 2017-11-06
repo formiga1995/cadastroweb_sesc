@@ -1,6 +1,8 @@
 body{
     background-color: #fbfbff;
     align-self: center;
+    background-image: url("imgs/white-85.jpg");
+    background-repeat: no-repeat;
 }
 .container{
     
@@ -402,4 +404,3 @@ body{
                 box-shadow: 0px 4px 2px 0px #999;
                 /*border-radius: 50%;*/
             }
-            
