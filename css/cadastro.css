@@ -1,0 +1,301 @@
+body{
+                overflow-x: hidden;
+                background-color: #faf8fc;
+                font-family: "Montserrat", Times, serif;
+                -webkit-tap-highlight-color:transparent;
+            }
+            .barra{
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 48px;
+                background-color: #113399;
+                box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
+                z-index: 1;
+            }
+            .container{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                
+                margin: auto;
+                margin-top: 100px;
+                width: 800px;
+                /*height: 600px;*/
+                padding: 20px;
+                border-radius: 2px;
+                border-left: 20px solid #113399;
+                background-color: #fffdff;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-flow: row wrap;
+                justify-content: space-around;
+                box-shadow: 1px 2px 5px 0px #666;
+            }
+            #cadastro{
+                /*display: block;*/
+                /*border: 1px solid #000000;*/
+                text-align: center;
+                outline: none;
+                color: #666;
+                font-size: 18px;
+                letter-spacing: 1px;
+                /*box-shadow: 1px 2px 5px 0px #666;*/
+                -webkit-backface-visibility: hidden;
+            }
+            .linha{
+                margin: auto;
+                margin-top: 40px;
+                margin-left: 0px;
+                width: 840px;
+                height: 10px;
+                /*background-color: #eee;*/
+                background-color: #fffdff;
+                text-align: center;
+                /*box-shadow: 0px 14px 8px -8px #aaa;*/
+                box-shadow: 
+                    -0px 0 #fffdff,         /*Left masking shadow*/
+                    0px 0 #fffdff,          /*Right masking shadow*/
+                    0 5px 8px -0px rgba(0, 0, 0, 0.4); /*The real (slim) shadow*/
+            }
+            .entre{
+                font-family: "Montserrat", Times, serif;
+                margin-top: 40px;
+                width: 320px;
+                height: 24px;
+                padding: 2px;
+                border: 0px;
+                outline: none;
+                background: none;
+                border-bottom: 2px solid #666;
+                color: #000;
+                font-size: 18px;
+                letter-spacing: 1px;
+                opacity: 0.6;
+                transition: .2s;
+            }
+            .entre:hover, .entre:focus{
+                opacity: 1;
+                border-bottom: 2px solid #666;
+            }
+            .entre:required:not(:placeholder-shown):invalid{
+                border-bottom: 2px solid #cc2200;
+            }
+            .entre:focus{
+                border-bottom: 2px solid #0044cc;
+            }
+            #email{
+                width: 320px;
+            }
+            #senha{
+                width: 320px;
+            }
+            #cpf{
+                width: 160px;
+            }
+            #nome{
+                width: 480px;
+            }
+            #data{
+                width: 160px;
+            }
+            #sexo{
+                width: 160px;
+                padding: 4px;
+                height: 32px;
+                line-height: 4px;
+            }
+            #civ{
+                width: 315px;
+                padding: 4px;
+                height: 32px;
+                line-height: 4px;
+            }
+            #uf{
+                width: 80px;
+                padding: 4px;
+                height: 32px;
+                line-height: 4px;
+            }
+            #cep{
+                width: 120px;
+            }
+            #end{
+                width: 430px;
+            }
+            #cid{
+                width: 320px;
+            }
+            #bai{
+                width: 320px;
+            }
+            #comp{
+                width: 400px;
+            }
+            #nume{
+                width: 80px;
+            }
+            #hab{
+                width: 160px;
+                padding: 4px;
+                height: 32px;
+                line-height: 4px;
+            }
+            #pai{
+                width: 320px;
+            }
+            #mae{
+                width: 320px;
+            }
+            #rg{
+                width: 120px;
+            }
+            #org{
+                width: 180px;
+            }
+            #nat{
+                width: 160px;
+            }
+            #nac{
+                width: 160px;
+            }
+            #cart{
+                width: 240px;
+            }
+            #prof{
+                width: 400px;
+            }
+            #dadm{
+                width: 200px;
+            }
+            #cnpj{
+                width: 440px;
+            }
+            #rend{
+                width: 320px;
+            }
+            #grau{
+                width: 320px;
+                padding: 4px;
+                height: 32px;
+                line-height: 4px;
+            }
+            #tel{
+                width: 210px;
+            }
+            .botao{
+                margin-top: 20px;
+                width: 320px;
+                height: 44px;
+                padding: 4px;
+                border: 0px;
+                border-radius: 3px;
+                outline:0;
+                
+                /*font-family: "Arial", Times, serif;*/
+                background-color: #113399;
+                color: #ffffff;
+                font-size: 18px;
+                letter-spacing: 1px;
+                transition: .3s;
+                /*box-shadow: inset 0 0 0 5em rgba(255,255,255,0.2);*/
+                transition: box-shadow 0.8s;
+                list-style-type:none;
+                display:inline-block;
+                line-height:2em;
+                color:#fff;
+                position:relative;
+                overflow:hidden;
+                transition: 0.2s;
+            }
+            button {
+                position: relative;
+                overflow: hidden;
+                padding: 16px 32px;
+            }
+            button:after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 420px;
+                height: 420px;
+                margin-left: -210px;
+                margin-top: -210px;
+                /*background: #3f51b5;*/
+                background: #fff;
+                border-radius: 100%;
+                opacity: .2;
+
+                transform: scale(0);
+            }
+
+            @keyframes ripple {
+                0% {
+                    transform: scale(0);
+                }
+                20% {
+                    transform: scale(1);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(1);
+                }
+            }
+
+            button:not(:active):after {
+                animation: ripple 2.5s ease-out;
+            }
+
+            /* fixes initial animation run, without user input, on page load.
+            */
+            button:after {
+                visibility: hidden;
+            }
+
+            button:focus:after {
+                visibility: visible;
+            }
+            .botao:hover, .botao:focus{
+                background-color: #114baa;
+                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+                /*border-radius: 50%;*/
+            }
+            .rodape{
+                overflow-x: hidden;
+                position: relative;
+                border-top: 1px solid #ddd;
+                margin-top: 80px;
+                bottom: 0;
+                left: -7px;
+                width: 100%;
+                height: 48px;
+                padding: 10px;
+                padding-left: 20px;
+                background-color: #fcfcfc;
+                opacity: 0.8;
+            }
+            .rodape img {
+                float: left;
+                margin: auto;
+                height: 100%;
+            }
+            #footinfo{
+                float: left;
+                margin-left: 20px;
+                padding: 20px;
+                border-left: 2px solid #305AA8;
+                color: #666;
+            }
+            ::-webkit-input-placeholder, select.first-child { /* WebKit, Blink, Edge */
+                color: #aaa;
+            }
+            .entre::-webkit-input-placeholder{ /* WebKit, Blink, Edge */
+                color: #666;
+            }

@@ -8,7 +8,7 @@ and open the template in the editor.
     <head>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css\index.css"/>
-        <title>SESC - Acesso</title>
+        <title>SESC - Recuperar Senha</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -26,19 +26,19 @@ and open the template in the editor.
         <div class='login' id='login' >
         <form>
             <br>
-            <div align='center'>Bem-vindo(a)!</div>
+            <div align='center'>Recuperar Senha</div>
             <img src ="imgs\sesclogo.png" height="65" width="110">
             <br><br>
             <input class='entre' id='cpf' maxlength='14' required
-                   pattern="\d{3}.\d{3}.\d{3}-\d{2}" title="CPF: (###.###.###-##)" placeholder="CPF" >
+                   pattern="\d{3}.\d{3}.\d{3}-\d{2}" title="CPF: (###.###.###-##)" placeholder="CPF">
             <br>
+            <input class='entre' id="nome" placeholder="Nome completo" required="">
+            <input class='entre' id="nome" placeholder="E-mail" required="">
             <input class='entre' type="password" placeholder='Senha' required>
-            <br><br>
-            <button class='botao'>Entrar</button>
+            <button class='botao'>Cadastrar </button>
         </form>
-            <button class='botao' id='cadastro' formaction="/dependente.html" onclick="window.location.href='primeiroacesso.html'">Cadastrar-se</button>
-            <a href="recuperarsenha.html"> Esqueci minha senha</a>
-        </div>
+            <button class='botao' id='cadastro' formaction="index.html" onclick="window.location.href='\index.html'">Login</button>
+                   </div>
         
         <script type="text/javascript">
         jQuery(function($) {
